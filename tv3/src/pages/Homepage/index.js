@@ -2,6 +2,8 @@ import React from 'react'
 import './styles.scss'
 import Logic from '../../utilities'
 
+import DataCapture from '../DataCapture'
+
 //images
 import demo1 from '../../assets/img/demo1/1.jpg'
 import demo2 from '../../assets/img/demo1/2.jpg'
@@ -52,13 +54,25 @@ class Homepage extends React.Component {
         this.main = React.createRef();
     }
 
+    state = {
+        loading: true
+    }
+
     componentDidMount() {
         new Logic(this.main.current)
+    }
+
+    disableLoading = (value) => {
+        // console.log(value)
+        this.setState({
+            loading: value
+        })
     }
 
     render() {
         return (
             <div className="demo-3 loading" ref={this.main}>
+            {this.state.loading && <DataCapture setLoading={this.disableLoading}/>}
 
                 <main id="main" data-scroll-container>
                     <section id="header" className="content content--auto">
