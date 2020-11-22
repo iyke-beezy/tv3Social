@@ -4,21 +4,21 @@ import Logic from '../../utilities'
 
 import DataCapture from '../DataCapture'
 
-//images
-import demo1 from '../../assets/img/demo1/1.jpg'
-import demo2 from '../../assets/img/demo1/2.jpg'
-import demo3 from '../../assets/img/demo1/3.jpg'
-import demo4 from '../../assets/img/demo1/4.jpg'
-import demo7 from '../../assets/img/demo1/7.jpg'
-import demo8 from '../../assets/img/demo1/8.jpg'
-import demo13 from '../../assets/img/demo1/13.jpg'
-import demo14 from '../../assets/img/demo1/14.jpg'
-import demo15 from '../../assets/img/demo1/15.jpg'
-import demo19 from '../../assets/img/demo1/19.jpg'
-import demo20 from '../../assets/img/demo1/20.jpg'
-import demo21 from '../../assets/img/demo1/21.jpg'
-import demo25 from '../../assets/img/demo1/25.jpg'
-import demo26 from '../../assets/img/demo1/26.jpg'
+ //images
+// import demo1 from '../../assets/img/demo1/1.jpg'
+// import demo2 from '../../assets/img/demo1/2.jpg'
+// import demo3 from '../../assets/img/demo1/3.jpg'
+// import demo4 from '../../assets/img/demo1/4.jpg'
+// import demo7 from '../../assets/img/demo1/7.jpg'
+// import demo8 from '../../assets/img/demo1/8.jpg'
+// import demo13 from '../../assets/img/demo1/13.jpg'
+// import demo14 from '../../assets/img/demo1/14.jpg'
+// import demo15 from '../../assets/img/demo1/15.jpg'
+// import demo19 from '../../assets/img/demo1/19.jpg'
+// import demo20 from '../../assets/img/demo1/20.jpg'
+// import demo21 from '../../assets/img/demo1/21.jpg'
+// import demo25 from '../../assets/img/demo1/25.jpg'
+// import demo26 from '../../assets/img/demo1/26.jpg'
 
 import tv3 from '../../assets/img/tv3.png'
 import gmb1 from '../../assets/img/1.PNG'
@@ -84,7 +84,7 @@ class Homepage extends React.Component {
                         </div>
                     </section>
 
-                    <section className="tiles tiles--perspective tiles--darker">
+                    {/* <section className="tiles tiles--perspective tiles--darker">
                         <div className="tiles__wrap">
                             <div className="tiles__line" data-scroll data-scroll-speed="2" data-scroll-direction="horizontal">
                                 <div className="tiles__line-img" style={{ backgroundImage: `url(${demo1})` }}>
@@ -129,7 +129,51 @@ class Homepage extends React.Component {
                             </div>
                         </div>
                         <h2 className="tiles__title tiles__title--intro" data-scroll data-scroll-speed="4">Ghana's<br />Most Beautiful</h2>
-                    </section>
+                    </section> */}
+                    <section className="tiles tiles--rotated" id="grid2">
+				<div className="tiles__wrap">
+					<div className="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
+						<div className="tiles__line-img"></div>
+						<div className="tiles__line-img"></div>
+						<div className="tiles__line-img"></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb1})` }}></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb2})` }}></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb9})` }}></div>
+					</div>
+					<div className="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
+						<div className="tiles__line-img"></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb3})` }}></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb5})` }}></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb6})` }}></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb10})` }}></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb8})` }}></div>
+					</div>
+					<div className="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb3})` }}></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb5})` }}></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb8})` }}></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb1})` }}></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb7})` }}></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb4})` }}></div>
+					</div>
+					<div className="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb5})` }}></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb1})` }}></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb2})` }}></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb6})` }}></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb7})` }}></div>
+						<div className="tiles__line-img"></div>
+					</div>
+					<div className="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
+						<div className="tiles__line-img"></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb9})` }}></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb4})` }}></div>
+						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb3})` }}></div>
+						<div className="tiles__line-img"></div>
+						<div className="tiles__line-img"></div>
+					</div>
+				</div>
+			</section>
 
                     <section className="content content--feature">
                         <p className="content__breakout content__breakout--big" data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"></p>

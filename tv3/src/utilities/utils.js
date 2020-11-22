@@ -3,6 +3,7 @@ var WebFont = require('webfontloader')
 
 // Preload images
 const preloadImages = (selector = 'img') => {
+    console.log(imagesLoaded(selector, { background: true }))
     return new Promise((resolve) => {
         imagesLoaded(selector, { background: true }, resolve);
     });

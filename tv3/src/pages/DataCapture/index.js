@@ -1,22 +1,48 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import './styles.scss'
 
 import { Steps, Button, message, Input, Radio, Select } from 'antd';
 import { UserOutlined } from '@ant-design/icons'
+import { uploadData, resetAuthForm } from '../../store/Admin/admin.actions'
 
 const { Step } = Steps;
 const { Option } = Select;
 
 
+const mapState = ({ admin }) => ({
+    uploadSuccess: admin.uploadSuccess,
+    uploadFailure: admin.uploadFailure,
+    errorMsg: admin.errorMsg
+})
+
 const DataCapture = props => {
+    const dispatch = useDispatch()
     const [current, setCurrent] = useState(0);
     const [age, setAge] = useState(null)
     const [gender, setGender] = useState(null)
     const [region, setRegion] = useState(null)
 
+    const { uploadSuccess, uploadFailure, errorMsg } = useSelector(mapState)
+
     const handleAgeChange = e => {
         setAge(e.target.value)
     }
+
+    //upload success
+    useEffect(() => {
+        if (uploadSuccess) {
+            dispatch(resetAuthForm())
+            props.setLoading(false)
+        }
+    }, [uploadSuccess])
+
+    //upload failure
+    useEffect(() => {
+        if (uploadFailure) {
+            message.error(errorMsg)
+        }
+    }, [uploadFailure])
 
     const handleGenderChange = e => {
         setGender(e.target.value)
@@ -50,6 +76,14 @@ const DataCapture = props => {
 
     function onSearch(val) {
         console.log('search:', val);
+    }
+
+    const uploadDemo = () => {
+        dispatch(uploadData({
+            age,
+            gender,
+            region
+        }))
     }
 
     const steps = [
@@ -96,7 +130,7 @@ const DataCapture = props => {
                 <Option value="Northern Region">Northern Region</Option>
                 <Option value="Savannah Region">Savannah Region</Option>
                 <Option value="North East Region">North East Region</Option>
-                <Option value="Upper West Region">Upper East Region</Option>
+                <Option value="Upper East Region">Upper East Region</Option>
                 <Option value="Upper West Region">Upper West Region</Option>
                 <Option value="Volta Region">Volta Region</Option>
                 <Option value="Oti Region">Oti Region</Option>
@@ -135,7 +169,7 @@ const DataCapture = props => {
                         </Button>
                     )}
                     {current === steps.length - 1 && (
-                        <Button type="primary" onClick={() => props.setLoading(false)} disabled={region ? false : true}>
+                        <Button type="primary" onClick={uploadDemo} disabled={region ? false : true}>
                             Done
                         </Button>
                     )}

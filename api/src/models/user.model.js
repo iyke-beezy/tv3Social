@@ -1,7 +1,7 @@
-import { Schema, model } from 'mongoose'
+import mongoose from 'mongoose'
 
 
-const userSchema = Schema({
+const userSchema = mongoose.Schema({
     Age: {
         type: String,
         required: [true, 'Age is required']
@@ -17,9 +17,13 @@ const userSchema = Schema({
         required: [true, 'Region is required']
     },
 
-    city: String
+    city: String,
+    timestamp: {
+        type: Date,
+        default: Date.now
+    }
 })
 
-const User = model('User', userSchema)
+const User = mongoose.model('User', userSchema)
 
 export default User

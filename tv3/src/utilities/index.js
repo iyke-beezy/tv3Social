@@ -1,11 +1,11 @@
+import React from 'react'
 import { preloadImages, preloadFonts } from './utils';
 import LocomotiveScroll from 'locomotive-scroll'
-import { EventEmitter } from 'events'
 
 
 // Preload  images and fonts
 
-export default class Logic extends EventEmitter {
+export default class Logic extends React.Component {
     constructor(el) {
         super();
 
@@ -21,22 +21,30 @@ export default class Logic extends EventEmitter {
 
     loadImages = async () => {
         Promise.all([preloadImages(this.DOM.images), preloadFonts('rmd7deq')]).then(() => {
-            // Remove loader (loading class)
-            this.DOM.el.classList.remove('loading');
-
             // Initialize the Locomotive scroll
             const scroll = new LocomotiveScroll({
                 el: this.DOM.dataScrollContainer,
                 smooth: true
             });
 
+            // Remove loader (loading class)
+            this.DOM.el.classList.remove('loading');
+
+
             this.DOM.backtopEl.addEventListener('click', () => scroll.scrollTo(this.DOM.headerEl));
         });
     }
 
-    render() {
-        console.log('sucess')
+    componentDidMount() {
         this.loadImages()
+    }
+
+    render() {
+        return (
+            // this.loadImages()
+            <p>success</p>
+        )
+
     }
 
 }

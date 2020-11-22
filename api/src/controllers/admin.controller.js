@@ -1,7 +1,6 @@
 import Admin from '../models/admin.model'
 
-export default {
-    getData: async (req, res, next) => {
+export const getData = async (req, res, next) => {
         const { adminID } = req.body
         try {
             const admin = await Admin.checkExistingField('_id', adminID)
@@ -20,6 +19,5 @@ export default {
                 }
             })
         }
+    }
 
-    },
-}
