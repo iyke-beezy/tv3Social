@@ -7,6 +7,7 @@ import 'antd/dist/antd.css'
 //pages
 import Homepage from './pages/Homepage'
 import DataCapture from './pages/DataCapture'
+import Admin from './pages/Admin'
 
 //actions
 import { downloadData } from './store/Admin/admin.actions'
@@ -28,6 +29,11 @@ const App = props => {
         <Route path='/data' render={
           () => <DataCapture />
         } />
+
+        <Route path='/admin' render={
+          () => <Admin />
+        } />
+
       </Switch>
     </div>
   );

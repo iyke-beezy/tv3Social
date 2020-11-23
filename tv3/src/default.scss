@@ -9,3 +9,79 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+html {
+    font-size: 10px;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body,
+#root,
+.App,
+.fullHeight {
+    height: 100%;
+}
+
+*, ::before, ::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a, a:hover {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.main{
+    max-width: 1450px;
+    height: calc(100% - 8.5rem);
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+// miscellaneous
+.ant-layout-sider {
+    background-color: white !important;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.1)
+}
+
+.ant-layout-sider-trigger {
+    background-color: #e6f7ff !important;
+
+    color: #005fff !important;
+}
+
+.ant-layout-header {
+    background-color: #F6F9FB !important;
+}
+
+.ant-layout {
+    background-color: #F6F9FB !important;
+}
+
+.ant-menu-item-selected {
+    color: #005fff !important;
+}
+
+.ant-menu-inline .ant-menu-item::after {
+    border-color: #005fff !important;
+}

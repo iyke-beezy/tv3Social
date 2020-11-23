@@ -4,7 +4,7 @@ import Logic from '../../utilities'
 
 import DataCapture from '../DataCapture'
 
- //images
+//images
 // import demo1 from '../../assets/img/demo1/1.jpg'
 // import demo2 from '../../assets/img/demo1/2.jpg'
 // import demo3 from '../../assets/img/demo1/3.jpg'
@@ -47,6 +47,10 @@ import a2 from '../../assets/img/_R5A.jpg'
 import a3 from '../../assets/img/_R5A8.jpg'
 import a4 from '../../assets/img/_R5A829.jpg'
 
+import wf1 from '../../assets/img/wf.jpg'
+import wf2 from '../../assets/img/wf2.jpg'
+import wf3 from '../../assets/img/wf3.jpg'
+
 class Homepage extends React.Component {
     constructor(props) {
         super(props);
@@ -72,10 +76,10 @@ class Homepage extends React.Component {
     render() {
         return (
             <div className="demo-3 loading" ref={this.main}>
-            {this.state.loading && <DataCapture setLoading={this.disableLoading}/>}
+                {this.state.loading && <DataCapture setLoading={this.disableLoading} />}
 
                 <main id="main" data-scroll-container>
-                    <section id="header" className="content content--auto">
+                    <section id="header" className="content content--fixed">
                         <div className="frame">
                             <div className="frame__title-wrap">
                                 <img className="frame__title" style={{ width: 255 }} src={tv3} alt='tv3' />
@@ -131,49 +135,49 @@ class Homepage extends React.Component {
                         <h2 className="tiles__title tiles__title--intro" data-scroll data-scroll-speed="4">Ghana's<br />Most Beautiful</h2>
                     </section> */}
                     <section className="tiles tiles--rotated" id="grid2">
-				<div className="tiles__wrap">
-					<div className="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
-						<div className="tiles__line-img"></div>
-						<div className="tiles__line-img"></div>
-						<div className="tiles__line-img"></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb1})` }}></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb2})` }}></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb9})` }}></div>
-					</div>
-					<div className="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
-						<div className="tiles__line-img"></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb3})` }}></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb5})` }}></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb6})` }}></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb10})` }}></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb8})` }}></div>
-					</div>
-					<div className="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb3})` }}></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb5})` }}></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb8})` }}></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb1})` }}></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb7})` }}></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb4})` }}></div>
-					</div>
-					<div className="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb5})` }}></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb1})` }}></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb2})` }}></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb6})` }}></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb7})` }}></div>
-						<div className="tiles__line-img"></div>
-					</div>
-					<div className="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
-						<div className="tiles__line-img"></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb9})` }}></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb4})` }}></div>
-						<div className="tiles__line-img" style={{ backgroundImage: `url(${gmb3})` }}></div>
-						<div className="tiles__line-img"></div>
-						<div className="tiles__line-img"></div>
-					</div>
-				</div>
-			</section>
+                        <div className="tiles__wrap">
+                            <div className="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
+                                <div className="tiles__line-img"></div>
+                                <div className="tiles__line-img"></div>
+                                <div className="tiles__line-img"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb1})` }}></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb2})` }}></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb9})` }}></div>
+                            </div>
+                            <div className="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
+                                <div className="tiles__line-img"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb3})` }}></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb5})` }}></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb6})` }}></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb6})` }}></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb8})` }}></div>
+                            </div>
+                            <div className="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb3})` }}></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb5})` }}></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb8})` }}></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb9})` }}></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb7})` }}></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb4})` }}></div>
+                            </div>
+                            <div className="tiles__line" data-scroll data-scroll-speed="-1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb5})` }}></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb1})` }}></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb9})` }}></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb10})` }}></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb7})` }}></div>
+                                <div className="tiles__line-img"></div>
+                            </div>
+                            <div className="tiles__line" data-scroll data-scroll-speed="1" data-scroll-target="#grid2" data-scroll-direction="horizontal">
+                                <div className="tiles__line-img"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb9})` }}></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb4})` }}></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${gmb3})` }}></div>
+                                <div className="tiles__line-img"></div>
+                                <div className="tiles__line-img"></div>
+                            </div>
+                        </div>
+                    </section>
 
                     <section className="content content--feature">
                         <p className="content__breakout content__breakout--big" data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"></p>
@@ -219,6 +223,35 @@ class Homepage extends React.Component {
                             </div>
                         </div>
                         <h2 className="tiles__title tiles__title--left tiles__title--full tiles__title--alt" data-scroll data-scroll-speed="2">Empowerment</h2>
+                    </section>
+
+                    <section className="tiles tiles--fixed">
+                        <div className="tiles__wrap">
+                            <div className="tiles__line">
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="2" data-scroll-direction="horizontal"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="1" data-scroll-direction="horizontal"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="-3" data-scroll-direction="horizontal"></div>
+                            </div>
+                            <div className="tiles__line">
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="2" data-scroll-direction="horizontal"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="1" data-scroll-direction="horizontal"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="-3" data-scroll-direction="horizontal"></div>
+                            </div>
+                            <div className="tiles__line">
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="3" data-scroll-direction="horizontal"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="2" data-scroll-direction="horizontal"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="1" data-scroll-direction="horizontal"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="-1" data-scroll-direction="horizontal"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="-2" data-scroll-direction="horizontal"></div>
+                                <div className="tiles__line-img" style={{ backgroundImage: `url(${a4})` }} data-scroll data-scroll-speed="-3" data-scroll-direction="horizontal"></div>
+                            </div>
+                        </div>
                     </section>
 
                     <section className="content">

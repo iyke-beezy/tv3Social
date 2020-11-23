@@ -10,7 +10,8 @@ export const uploadData = ({ age, gender, region }) => async dispatch => {
         },
         body: JSON.stringify({ age, gender, region })
     })
-    console.log(await response.json())
+    
+    const data = await response.json()
     if (response.ok) {
         dispatch({
             type: adminTypes.ADD_USER_SUCCESS,
@@ -24,7 +25,7 @@ export const uploadData = ({ age, gender, region }) => async dispatch => {
 
     dispatch({
         type: adminTypes.ADD_USER_FAILURE_MSG,
-        payload: response.data.message
+        payload: data.data.message
     })
 
 }
@@ -37,11 +38,12 @@ export const downloadData = () => async dispatch => {
     const response = await fetch(`${apiUrl}/api/getData`, {
         method: 'POST',
     })
-
+    // console.log(await response.json())
+    const data = await response.json()
     if (response.ok) {
         dispatch({
             type: adminTypes.ADMIN_DATA,
-            payload: response.data.payload
+            payload: data.data.payload
         })
     }
 }
